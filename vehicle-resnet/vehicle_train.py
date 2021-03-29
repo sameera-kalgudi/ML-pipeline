@@ -7,7 +7,6 @@ from tensorflow.keras.applications import ResNet50
 from tensorflow.keras.optimizers import Adam, RMSprop, Adagrad, Adamax, SGD
 from tensorflow.keras.losses import CategoricalCrossentropy
 from tensorflow.keras.callbacks import ReduceLROnPlateau, EarlyStopping
-import matplotlib.pyplot as plt
 from tensorflow.keras.utils import get_file
 from os.path import join, dirname, basename
 from sklearn.model_selection import train_test_split

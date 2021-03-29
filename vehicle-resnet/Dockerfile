@@ -13,11 +13,11 @@ RUN pip install numpy
 RUN pip install Keras
 RUN pip install Pillow
 
-RUN git clone https://github.com/sameera-kalgudi/MLapp.git
-RUN cd MLapp/vehicle-resnet/
-WORKDIR ./MLapp/vehicle-resnet/
+RUN git clone https://github.com/sameera-kalgudi/ML-pipeline.git
+RUN cd ML-pipeline/vehicle-resnet/
+WORKDIR ./ML-pipeline/vehicle-resnet/
 
-RUN python vehicle_ResNet.py
+RUN python vehicle_train.py
 RUN wget -P models/ https://storage.googleapis.com/vehicle-dataset/model.v2.h5
 CMD ["python", "app.py"]
 EXPOSE 5000

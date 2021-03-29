@@ -13,12 +13,9 @@ RUN pip install numpy
 RUN pip install Keras
 RUN pip install Pillow
 
-RUN git clone https://github.com/sameera-kalgudi/MLapp.git
-RUN cd MLapp/
-WORKDIR ./MLapp/
-
+RUN git clone https://github.com/sameera-kalgudi/ML-pipeline.git
+RUN cd ML-pipeline/mnist-flask/
+WORKDIR ./ML-pipeline/mnist-flask/
 RUN python mnistCNN.py
-RUN cd mnist-flask/
-WORKDIR ./mnist-flask/
 CMD ["python", "app.py"]
 EXPOSE 5000
