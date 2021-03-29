@@ -12,12 +12,13 @@ RUN pip install Flask
 RUN pip install numpy
 RUN pip install Keras
 RUN pip install Pillow
+RUN pip install scikit-learn
+RUN pip install pandas
 
 RUN git clone https://github.com/sameera-kalgudi/ML-pipeline.git
 RUN cd ML-pipeline/vehicle-resnet/
 WORKDIR ./ML-pipeline/vehicle-resnet/
 
-RUN python vehicle_train.py
 RUN wget -P models/ https://storage.googleapis.com/vehicle-dataset/model.v2.h5
 CMD ["python", "app.py"]
 EXPOSE 5000

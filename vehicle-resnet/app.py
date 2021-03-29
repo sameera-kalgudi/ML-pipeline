@@ -49,7 +49,7 @@ def upload_image_file():
         prediction = prediction[0]
         class_label = CATEGORIES[np.argmax(prediction)]
 
-        return 'Predicted Number: ' + str(class_label)
+        return 'Predicted Vehicle: ' + str(class_label)
 		
 if __name__ == '__main__':
     print(("* Loading Keras model and Flask starting server..."
