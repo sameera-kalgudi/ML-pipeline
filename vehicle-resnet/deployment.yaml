@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-name: sam-resnet
+  name: sam-resnet
 spec:
   selector:
     matchLabels:
@@ -23,13 +23,13 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-name: sam-resnet
-labels:
-  app: sam-resnet
+  name: sam-resnet
+  labels:
+    app: sam-resnet
 spec:
-ports:
+  ports:
   - port: 5000
     targetPort: 5000
-selector:
-  app: sam-resnet
+  selector:
+    app: sam-resnet
 type: LoadBalancer
