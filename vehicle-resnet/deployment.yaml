@@ -32,4 +32,4 @@ spec:
     targetPort: 5000
   selector:
     app: sam-resnet
-type: LoadBalancer
+  type: LoadBalancer
