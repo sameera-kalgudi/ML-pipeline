@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
        - name: sam-resnet
-         image: samkalgudi24/vehicleclassification:latest
+         image: samkalgudi24/vehicleclassification:4
          imagePullPolicy: Always
          ports:
          - containerPort: 5000
