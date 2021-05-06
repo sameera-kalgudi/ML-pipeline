@@ -94,7 +94,7 @@ model.compile(optimizer=RMSprop(lr=0.001),
 
 
 model.summary()
-model.save("./models/resnet.v1.h5")
+#model.save("./models/resnet.v1.h5")
 
 model = model.fit(train_data_gen,validation_data=valid_data_gen,epochs=5,callbacks=[early_stop, reduce_lr])
 
